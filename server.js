@@ -15,6 +15,7 @@ const server = prerender({
   ]
 });
 
+server.use(prerender.whitelist());
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.blockResources());
 server.use(prerender.removeScriptTags());
